@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            background-color: aqua;
+            padding: 10px;
+
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            flex: 1;
+            width: 100%;
+        }
+        header nav{
+            width: 100%;
+        }
+
+        li a{
+            font-size: 2rem;
+        }
+        li{
+            padding: 25px;
+            border: 1px solid #000;
+            width: 100%;
+        }
+        header h1{
+            min-width: 200px;
+            padding: 25px;
+            border: 1px solid #000;
+        }
+        .toggle{
+            display: none;
+            border: none;
+            background-color: blueviolet;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      
+        .show{
+            display: block;
+        }
+        .toggle i{
+            font-size: 1.5rem;
+        }
+        @media (max-width:768px){
+            nav{
+                position: absolute;
+                bottom: -300px;
+                height: 300px;
+                display: none;
+            }
+            .toggle{
+                display: block;
+            }
+            header h1{
+                border: none;
+            }
+            nav ul{
+                flex-direction: column;
+                
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <a href="" download="./assets/resume/resume.pdf.docx">download</a>
+    <header>
+        <h1>Bhaskar
+        </h1>
+
+        <nav id="nav" class="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+        <button class="toggle" onclick="toggle()"><i class="fa-solid fa-bars" id="icon"></i></button>
+    </header>
+
+
+    <script>
+        let nav = document.getElementById('nav')
+        let icon = document.getElementById('icon')
+        function  toggle(){
+            nav.classList.toggle('show')
+            icon.classList.toggle('fa-close')
+            
+        }
+    </script>
+</body>
+</html>
